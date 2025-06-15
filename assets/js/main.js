@@ -33,7 +33,7 @@ if (headerToggleBtn) {
 }
 
 
-document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListener("DOMContentLoaded", function () {
   const toggleBtn = document.getElementById("sidebar-toggle");
   const header = document.getElementById("header");
   const sidebar = document.getElementById("sidebar");
@@ -42,7 +42,6 @@ document.addEventListener("DOMContentLoaded", function () {
     toggleBtn.addEventListener("click", () => {
       header.classList.toggle("collapsed");
       sidebar.classList.toggle("collapsed");
-      document.body.classList.toggle("sidebar-open"); // ✅ Add this line
     });
   }
 });
