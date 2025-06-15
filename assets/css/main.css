@@ -213,11 +213,6 @@ h6 {
   }
 }
 
-@media (max-width: 1199px) {
-  .header {
-    left: -100%;
-  }
-}
 
 .header.header-show {
   left: 0;
@@ -1572,4 +1567,32 @@ input:checked + .slider::before {
 
 body.dark-mode .certificate-title {
   color: #f1f1f1;
+}
+
+/* Collapse behavior for mobile */
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background: #fff;
+    z-index: 999;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-100%);
+  }
+
+  .sidebar.collapsed {
+    transform: translateX(0);
+  }
+
+  .header.collapsed {
+    /* optional visual styling if you want header to respond too */
+  }
+
+  /* Optional: prevent body scroll when sidebar is open */
+  body.sidebar-open {
+    overflow: hidden;
+  }
 }
