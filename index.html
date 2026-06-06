@@ -43,28 +43,18 @@
 
   <header id="header" class="header dark-background d-flex flex-column">
     <aside id="sidebar" class="sidebar">
-      <button id="sidebar-toggle" class="burger-btn">
-
-      <div class="top-bar">
-        
-          <i class="bi bi-list"></i>
-        </button>
-        <label class="switch">
-          <input type="checkbox" id="dark-mode-toggle">
-          <span class="slider">☀️ 🌙</span>
-        </label>
-
-      </div>
+      <button id="sidebar-toggle" class="burger-btn" aria-label="Toggle sidebar">
+        <i class="bi bi-list"></i>
+      </button>
 
       <div class="profile-img">
-        <img src="assets/img/profile.jpg" alt="" class="img-fluid rounded-circle">
+        <img src="assets/img/profile.jpg" alt="Matthew Isaac Bides" class="img-fluid rounded-circle">
       </div>
 
       <a href="index.html" class="logo d-flex align-items-center justify-content-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
         <h1 class="sitename">Matthew Isaac Bides</h1>
       </a>
+      <p class="sidebar-tagline text-center">Interactive portfolio hub</p>
 
       <div class="social-links text-center">
         <a href="https://x.com/BidesIsaac" class="twitter"><i class="bi bi-twitter-x"></i></a>
@@ -76,7 +66,7 @@
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
-          <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
+          <li><a href="#about"><i class="bi bi-person navicon"></i> About Me</a></li>
           <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
           <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
           <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
@@ -88,17 +78,75 @@
   <main class="main">
 
     <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background">
+    <section id="hero" class="hero section">
+      <div class="hero-grid"></div>
+      <div class="container hero-shell" data-aos="fade-up" data-aos-delay="100">
+        <div class="hero-copy">
+          <p class="hero-kicker">Interactive portfolio / player profile</p>
+          <h2>Matthew Isaac Bides</h2>
+          <p class="hero-lead">I build game-inspired web experiences, systems, and applications that feel more like a playable world than a static resume.</p>
 
-      <img src="assets/img/hero.jpg" alt="" data-aos="fade-in" class="">
+          <p>I'm a <span class="typed" data-typed-items="Backend Developer, Game Builder, Student, System Creator"></span><span
+              class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span
+              class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <h2>Matthew Isaac Bides</h2>
-        <p>I'm a <span class="typed" data-typed-items="Backend, Game, Student, Developer"></span><span
-            class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span
-            class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+          <div class="hero-actions">
+            <a href="#portfolio" class="hero-button primary"><i class="bi bi-controller"></i> Enter Portfolio</a>
+            <a href="#resume" class="hero-button"><i class="bi bi-file-earmark-text"></i> Open Resume</a>
+          </div>
+
+          <div class="mission-grid">
+            <a class="mission-card" href="#about">
+              <span>01</span>
+              <strong>About Me</strong>
+              <small>Background, skills, and what I build</small>
+            </a>
+            <a class="mission-card" href="#resume">
+              <span>02</span>
+              <strong>Resume</strong>
+              <small>Timeline, education, and experience</small>
+            </a>
+            <a class="mission-card" href="#portfolio">
+              <span>03</span>
+              <strong>Portfolio</strong>
+              <small>Systems, apps, websites, and games</small>
+            </a>
+            <a class="mission-card" href="#contact">
+              <span>04</span>
+              <strong>Contact</strong>
+              <small>Start a new project or collaboration</small>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-panel">
+          <div class="hero-avatar-frame">
+            <img src="assets/img/profile.jpg" alt="Matthew Isaac Bides profile portrait">
+            <span class="hero-avatar-ring"></span>
+          </div>
+
+          <div class="hero-status">
+            <span class="status-pill">Online</span>
+            <h3>Mission ready</h3>
+            <p>Available for freelance builds, internships, and project collaborations.</p>
+          </div>
+
+          <div class="hero-hud">
+            <div class="hud-item">
+              <span>Focus</span>
+              <strong>Systems + UI</strong>
+            </div>
+            <div class="hud-item">
+              <span>Mode</span>
+              <strong>Build + Ship</strong>
+            </div>
+            <div class="hud-item">
+              <span>Level</span>
+              <strong>Game-minded dev</strong>
+            </div>
+          </div>
+        </div>
       </div>
-
     </section><!-- /Hero Section -->
 
     <!-- About Section -->
@@ -342,7 +390,7 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Portfolio</h2>
-        <p>Here are some of the projects I finished over the past few years. This projects let me gain knowledge through experiencing different coding languages and style.</p>
+        <p>These are the projects that shaped my style. Each card opens into a deeper page, so the portfolio works like a set of selectable missions instead of a flat gallery.</p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -353,7 +401,7 @@
             <li data-filter="*" class="filter-active">All</li>
             <li data-filter=".filter-Website">Website</li>
             <li data-filter=".filter-System">System</li>
-            <li data-filter=".filter-Application">application</li>
+            <li data-filter=".filter-Application">Application</li>
             <li data-filter=".filter-Game">Game</li>
           </ul><!-- End Portfolio Filters -->
 
@@ -368,6 +416,20 @@
                   <a href="assets/img/portfolio/aps1.PNG" title="LPNHS Alumni System" data-gallery="portfolio-gallery-system"
                     class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   <a href="portfolio-alumni.html" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-System">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/ers1.PNG" class="img-fluid" alt="UPHSD Document Tracking System">
+                <div class="portfolio-info">
+                  <h4>System 4</h4>
+                  <p>UPHSD Document Tracking System</p>
+                  <a href="assets/img/portfolio/ers1.PNG" title="UPHSD Document Tracking System" data-gallery="portfolio-gallery-system"
+                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-uphsd.html" title="More Details" class="details-link"><i
                       class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
@@ -456,6 +518,20 @@
                     data-gallery="portfolio-gallery-application" class="glightbox preview-link"><i
                       class="bi bi-zoom-in"></i></a>
                   <a href="portfolio-order.html" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-Application">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/ifc1.PNG" class="img-fluid" alt="Fish Feeding">
+                <div class="portfolio-info">
+                  <h4>App 4</h4>
+                  <p>Fish Feeding</p>
+                  <a href="assets/img/portfolio/ifc1.PNG" title="Fish Feeding" data-gallery="portfolio-gallery-application"
+                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-fishfeeding.html" title="More Details" class="details-link"><i
                       class="bi bi-link-45deg"></i></a>
                 </div>
               </div>

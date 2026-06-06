@@ -46,20 +46,19 @@ if (headerToggleBtn) {
   }
 });
 
- const darkModeToggle = document.getElementById("dark-mode-toggle");
-if (darkModeToggle) {
-  darkModeToggle.addEventListener("click", () => {
-    document.body.classList.toggle("dark-mode");
-    localStorage.setItem('dark-mode', document.body.classList.contains("dark-mode"));
-  });
-}
-
-  // Load saved preference
-  window.addEventListener("DOMContentLoaded", () => {
-    if (localStorage.getItem('dark-mode') === 'true') {
-      document.body.classList.add("dark-mode");
-    }
-  });
+  /**
+   * Hero pointer glow
+   */
+  const heroSection = document.querySelector('.hero');
+  if (heroSection) {
+    heroSection.addEventListener('pointermove', (event) => {
+      const bounds = heroSection.getBoundingClientRect();
+      const pointerX = ((event.clientX - bounds.left) / bounds.width) * 100;
+      const pointerY = ((event.clientY - bounds.top) / bounds.height) * 100;
+      heroSection.style.setProperty('--pointer-x', `${pointerX}%`);
+      heroSection.style.setProperty('--pointer-y', `${pointerY}%`);
+    });
+  }
 
   /**
    * Toggle mobile nav dropdowns
